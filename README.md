@@ -6,7 +6,6 @@
 - Testes de API com Postman
 - Scripts de teste em JavaScript (pm.test)
 - Documentação de casos de teste
-- SQL para validação de dados
 - Git e GitHub
 
 ## Projetos
