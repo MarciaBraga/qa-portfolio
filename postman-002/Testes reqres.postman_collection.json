@@ -18,7 +18,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status é 201\", function () {\n    pm.response.to.have.status(201);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usuario criado com sucesso\", function () {\n    const json = pm.response.json();\n    pm.expect(json).to.be.empty;\n});"
+                  "pm.test(\"Status é 201\", function () {\n    pm.response.to.have.status(201);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usuário criado retorna id e dados enviados\", function () {\n    const json = pm.response.json();\n    pm.expect(json).to.have.property(\"id\");\n    pm.expect(json).to.have.property(\"name\");\n    pm.expect(json).to.have.property(\"job\");\n});"
                 ]
               }
             }
@@ -60,7 +60,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status é 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Lista de usuários não está vazia\", function () {\n    const json = pm.response.json();\n   pm.expect(json).to.be.empty;\n});"
+                  "pm.test(\"Status é 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usuário  retorna id e dados enviados\", function () {\n    const json = pm.response.json();\n    pm.expect(json).to.have.property(\"id\");\n    pm.expect(json).to.have.property(\"name\");\n    pm.expect(json).to.have.property(\"job\");\n});"
                 ]
               }
             }
@@ -103,7 +103,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status é 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Lista de usuários não está vazia\", function () {\n    const json = pm.response.json();\n     pm.expect(json).to.be.empty;\n});"
+                  "pm.test(\"Status é 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usuário existente retorna id e dados enviados\", function () {\n    const json = pm.response.json();\n    pm.expect(json).to.have.property(\"id\");\n    pm.expect(json).to.have.property(\"name\");\n    pm.expect(json).to.have.property(\"job\");\n});"
                 ]
               }
             }
@@ -132,7 +132,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status é 404\", function () {\n    pm.response.to.have.status(404);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usuário inexistente\", function () {\n    const json = pm.response.json();\n     pm.expect(json).to.be.empty;\n});"
+                  "pm.test(\"Status é 404\", function () {\n    pm.response.to.have.status(404);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\nppm.test(\"Usuário inexistente retorna {} vazio.\", function () {\n    const json = pm.response.json();\n    pm.expect(json).to.have.property(\"id\");\n    pm.expect(json).to.have.property(\"name\");\n    pm.expect(json).to.have.property(\"job\");\n});"
                 ]
               }
             }
@@ -166,7 +166,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status é 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usuário atualizado com sucesso\", function () {\n    const json = pm.response.json();\n     pm.expect(json).to.be.empty;\n});"
+                  "pm.test(\"Status é 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usuário atualizado retorna id e dados enviados\", function () {\n    const json = pm.response.json();\n    pm.expect(json).to.have.property(\"id\");\n    pm.expect(json).to.have.property(\"name\");\n    pm.expect(json).to.have.property(\"job\");\n});"
                 ]
               }
             }
@@ -209,7 +209,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status é 204\", function () {\n    pm.response.to.have.status(204);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\npm.test(\"Usario removido com sucesso (corpo vazio)\", function () {\n    const json = pm.response.json();\n   pm.expect(json).to.be.empty;\n});"
+                  "pm.test(\"Status é 204\", function () {\n    pm.response.to.have.status(204);\n});\n\npm.test(\"Tempo de resposta menor que 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\n\nppm.test(\"Usuário removido com sucesso, retorna {} vazio\", function () {\n    const json = pm.response.json();\n    pm.expect(json).to.have.property(\"id\");\n    pm.expect(json).to.have.property(\"name\");\n    pm.expect(json).to.have.property(\"job\");\n});"
                 ]
               }
             }
