@@ -5,7 +5,7 @@ criados para praticar validação de APIs com Postman.
 
 ## Arquivos
 - `Testes reqres.postman_collection.json`: requisições e testes
-- `reqres.postman_environment.json`: variável `base_url`
+- `reqres.postman_environment(1).json`: variável `base_url`
 
 ## Como executar
 1. No Postman, clique em **Import** e importe os dois arquivos.
