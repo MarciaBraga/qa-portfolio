@@ -1,7 +1,5 @@
 # qa-portfolio
 
-# Portfólio QA 
-
 ## Competências
 - Testes de API com Postman
 - Scripts de teste em JavaScript (pm.test)
